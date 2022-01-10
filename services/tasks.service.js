@@ -1,6 +1,6 @@
 const Task = require('./../models/task');
 
-class tasksService {
+class TasksService {
   findAll = async () => await Task.find();
 
   findById = async () => await Task.findById();
@@ -12,4 +12,4 @@ class tasksService {
   delete = async (id) => await Task.deleteOne({_id: id});
 }
 
-module.exports = tasksService;
+module.exports = TasksService;
