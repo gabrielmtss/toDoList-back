@@ -3,7 +3,10 @@ const Task = require('./../models/task');
 class TasksService {
   findAll = async () => await Task.find();
 
-  findById = async () => await Task.findById();
+  findById = async (id) => {
+    const task = await Task.findById(id)
+    return task;
+  }
 
   create = async (task) => await Task.create(task);
 
